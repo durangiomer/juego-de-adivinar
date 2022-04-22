@@ -1,20 +1,28 @@
 <meta charset="UTF-8">
 
+<h1> Bienvenido </h1>
+<br>
+<h2>¿Estas listo para acertar un numero entre el 1 y 100?</h2>
+<br>
+<h2>¡Vamos por ello!</h2>
+<br>
+
+
 <input/>
 <button>Me siento con suerte</button>
 
 <script>
-	var secreto = 15;
+	var numero = Math.round(Math.random()*100);
 	var input = document.querySelector("input");
 	var button = document.querySelector("button");
 	input.focus();
 	
 	function verificar() {
-		if (parseInt(input.value) == secreto) {
+		if (parseInt(input.value) == numero) {
 			alert("¡Enhorabuena acertaste!");
 		}
 		else {
-			alert("No has acertado, mejor suerte para la proxima");
+			alert("No has acertado, mejor suerte para la proxima, Numero ganador " + numero);
 		}
 		input.value = "";
 		input.focus();
